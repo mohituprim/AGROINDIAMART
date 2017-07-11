@@ -1,0 +1,24 @@
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" ngNativeValidate>
+  <div fxLayout="column" cellspacing="0">
+    <md-select style="font-size:small" placeholder="Choose your role" required>
+      <md-option *ngFor="let role of Roles" [value]="role.name">{{ role.name }}</md-option>
+    </md-select>
+    <md-input-container>
+      <input mdInput ngModel name="name" placeholder="Name" required>
+    </md-input-container>
+    <md-input-container>
+      <input mdInput ngModel name="phone" placeholder="Phone No." required>
+    </md-input-container>
+    <md-input-container>
+      <input mdInput ngModel name="email" placeholder="Email" required>
+    </md-input-container>
+    <md-input-container>
+      <input mdInput ngModel name="password" placeholder="Password" required>
+    </md-input-container>
+    <md-input-container>
+      <input mdInput ngModel name="confirmPassword" placeholder="Confirm Password" required>
+    </md-input-container>
+    <button md-button style="background-color:lightblue" color="white">Create Account</button>
+  </div>
+  <div style="margin-top:10px; text-align:center; font-size: x-small">By creating account with aim, I agree to Terms of Services</div>
+</form>

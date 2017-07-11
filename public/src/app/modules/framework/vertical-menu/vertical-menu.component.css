@@ -1,0 +1,18 @@
+.menu-item{
+padding: 10px;
+}
+.menu-header{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+}
+
+/deep/ .mat-card{
+  padding: 0px;
+}
+
+.border-style{
+  border: 1px solid #dddddd;
+  padding:5px
+}

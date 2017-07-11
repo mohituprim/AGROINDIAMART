@@ -1,0 +1,46 @@
+.fa-facebook-square{
+  color:#3b5998;
+}
+
+.fa-google-plus-square{
+  color: #dd4b39;
+}
+
+.googleButton{
+  /*background-color: #dd4b39;*/
+  width: 40%;
+}
+
+.facebookButton{
+  /*background-color: #3b5998;*/
+  width: 40%;
+}
+
+.mainDialogContainer{
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  height: 100%;
+  width: 100%;
+}
+.authContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.tabContainer{
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.socialMediaRow{
+  justify-content: space-around;
+}
+
+.fab-top-right {
+  position: absolute;
+}
+
+/deep/ .mat-dialog-container{
+padding: 14px;
+}

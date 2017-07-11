@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';*/
+/*@import '~@angular/material/prebuilt-themes/indigo-pink.css';*/
+@import "https://fonts.googleapis.com/css?family=Material+Icons";
+@import "https://fonts.googleapis.com/css?family=Roboto:400,300";
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  height: 100%;
+  background-color:#f3f3f3;
+}
+
+@media (min-width: 768px){
+  .container {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.padding-top5{
+  padding-top: 5px;
+}
+
+.padding-left5{
+  padding-left: 5px;
+}
+.text-align-center{
+  text-align: center;
+}
+
+.padding-right20
+{
+  padding-right:20px
+}

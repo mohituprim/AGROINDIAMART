@@ -1,0 +1,13 @@
+.mobile-sidenav{
+  min-width: 300px;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
+.sidenav-container{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+}

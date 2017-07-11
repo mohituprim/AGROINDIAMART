@@ -1,0 +1,14 @@
+.continue_shopping_order{
+  float: right;
+  color: #008bcf;
+}
+
+.empty_cart{
+  margin: 50px 200px;
+  position: relative;
+}
+
+.icon-cart {
+  font-size: 200px;
+  color: #999;
+}

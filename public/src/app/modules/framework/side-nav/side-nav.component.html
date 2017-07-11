@@ -1,0 +1,39 @@
+<div class="sidenav-container">
+  <md-nav-list>
+    <md-list-item (click)="toggleMarketTab()" style="background: rgba(0,0,0,.32); color: hsla(0,0%,100%,.87);" >
+      <div class="menu-header">
+        <md-icon md-list-icon>{{marketHeaderIcon}}</md-icon>
+        <h3 md-line>{{marketListHeader}}</h3>
+        <div fxFlex></div>
+        <md-icon md-list-icon *ngIf="!marketItems.length">expand_more</md-icon>
+        <md-icon md-list-icon *ngIf="marketItems.length">expand_less</md-icon>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <div [@listAnimation]="marketItems.length" *ngFor="let item of marketItems" ng-show="marketItems.length">
+      <md-list-item class="menu-item">
+        <a>{{item}}</a>
+      </md-list-item>
+      <md-divider></md-divider>
+    </div>
+  </md-nav-list>
+  <md-nav-list flex >
+    <md-list-item  (click)="toggleServiceTab()" style="background: rgba(0,0,0,.32);color: hsla(0,0%,100%,.87);" >
+      <div class="menu-header">
+        <md-icon flex-start  md-list-icon>{{servicesHeaderIcon}}</md-icon>
+        <h3 md-line>{{servicesListHeader}}</h3>
+        <div fxFlex></div>
+        <md-icon md-list-icon flex-end *ngIf="!servicesItems.length">expand_more</md-icon>
+        <md-icon md-list-icon  flex-end *ngIf="servicesItems.length">expand_less</md-icon>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <div [@listAnimation]="servicesItems.length" *ngFor="let item of servicesItems" ng-show="servicesItems.length">
+      <md-list-item class="menu-item">
+        <a>{{item}}</a>
+      </md-list-item>
+      <md-divider></md-divider>
+    </div>
+    <md-divider></md-divider>
+  </md-nav-list>
+</div>

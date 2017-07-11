@@ -1,0 +1,9 @@
+.logInForm{
+  text-align: center;
+}
+
+.rememberCheckBox{
+  justify-content: flex-start;
+  padding-bottom: 8px;
+  font-size: x-small;
+}

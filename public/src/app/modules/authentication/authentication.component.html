@@ -1,0 +1,30 @@
+<div class="mainDialogContainer">
+  <div class="authContainer">
+    <div class="tabContainer">
+      <md-tab-group>
+        <md-tab label="LogIn">
+              <fw-login></fw-login>
+        </md-tab>
+        <md-tab  label="Register">
+              <fw-register></fw-register>
+        </md-tab>
+      </md-tab-group>
+    </div>
+  </div>
+  <span fxFlex></span>
+  <div fxLayout="column">
+    <md-divider ></md-divider>
+    <div class="padding-top5 text-align-center"><span>Or start with ..</span></div>
+    <div class="padding-top5 socialMediaRow" fxLayout="row">
+      <a md-raised-button (click)="onClick('facebook')" class="facebookButton">
+        <i class="fa fa-facebook-square fa-2x"></i>
+        <span class="padding-left5">Facebook</span>
+      </a>
+      <a md-raised-button (click)="onClick('google')" class="googleButton">
+        <i class="fa fa-google-plus-square fa-2x"></i>
+        <span class="padding-left5">Google</span>
+      </a>
+    </div>
+    <div style="margin-top:10px;font-size: x-small; text-align:center">We will never post anything without your permission.</div>
+  </div>
+</div>

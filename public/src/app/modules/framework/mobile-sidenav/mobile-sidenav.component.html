@@ -1,0 +1,36 @@
+<div class="sidenav-container">
+  <md-nav-list>
+    <md-list-item style="background: rgba(0,0,0,.32); color: hsla(0,0%,100%,.87);" >
+      <div class="menu-header">
+        <md-icon md-list-icon>{{marketHeaderIcon}}</md-icon>
+        <h3 md-line>{{marketListHeader}}</h3>
+        <div fxFlex></div>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <div *ngFor="let item of marketItemList">
+      <md-list-item class="menu-item">
+        <a>{{item}}</a>
+      </md-list-item>
+      <md-divider></md-divider>
+    </div>
+  </md-nav-list>
+  <md-nav-list flex >
+    <md-list-item  style="background: rgba(0,0,0,.32);color: hsla(0,0%,100%,.87);" >
+      <div class="menu-header">
+        <md-icon flex-start  md-list-icon>{{servicesHeaderIcon}}</md-icon>
+        <h3 md-line>{{servicesListHeader}}</h3>
+        <div fxFlex></div>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <div *ngFor="let item of servicesItemList">
+      <md-list-item class="menu-item">
+        <a>{{item}}</a>
+      </md-list-item>
+      <md-divider></md-divider>
+    </div>
+    <md-divider></md-divider>
+  </md-nav-list>
+</div>
+

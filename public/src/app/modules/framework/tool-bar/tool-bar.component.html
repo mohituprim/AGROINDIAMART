@@ -1,0 +1,23 @@
+<div class="toolbar-container">
+  <md-toolbar class="toolbar-container">
+    <button class="app-icon-button">
+      <md-icon style="padding-right:5px" (click)="mobileNavOpen()" >menu</md-icon>
+    </button>
+    <span>Agro India Mart</span>
+    <!-- Filler that pushes the menu button to the end of the toolbar -->
+    <span fxFlex></span>
+    <button *ngIf="!authService.isLoggedIn()" md-button (click)="openLogInRegisterDialog()">
+      <md-icon>account_circle</md-icon>LogIn/Register
+    </button>
+    <button *ngIf="authService.isLoggedIn()" md-button (click)="logOut()">
+      <md-icon>account_circle</md-icon>LogOut
+    </button>
+    <button md-icon-button [mdMenuTriggerFor]="themeMenu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu #themeMenu x-position="before">
+    <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
+  </md-menu>
+  <md-divider></md-divider>
+</div>

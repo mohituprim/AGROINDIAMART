@@ -1,0 +1,19 @@
+<md-sidenav-container fxLayout="column">
+  <div fxLayout="column" >
+    <div fxFlex="grow">
+      <fw-tool-bar (mobileNavToggle)="mobileSidenav.toggle()"></fw-tool-bar>
+    </div>
+    <div class="container">
+      <div class="sidenav-container" *ngIf="!authService.isLoggedIn()">
+        <fw-side-nav></fw-side-nav>
+      </div>
+      <div><fw-main-content></fw-main-content></div>
+    </div>
+    <div fxFlex="grow" style="background-color:black;">footer</div>
+  </div>
+  <md-sidenav #mobileSidenav class="mobile-sidenav">
+    <fw-mobile-sidenav></fw-mobile-sidenav>
+  </md-sidenav>
+</md-sidenav-container>
+
+

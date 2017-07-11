@@ -1,0 +1,16 @@
+<form class="logInForm" #logInForm="ngForm" (ngSubmit)="onSubmit(logInForm)" ngNativeValidate>
+  <div fxLayout="column" cellspacing="0">
+    <md-input-container>
+      <input mdInput ngModel name="userName" ngModel #userName="ngModel" placeholder="Mobile No./Email Address" required>
+    </md-input-container>
+
+    <md-input-container >
+      <input mdInput ngModel name="password" ngModel #password="ngModel" placeholder="Password" required>
+    </md-input-container>
+
+    <md-checkbox  name="rememberMe" ngModel  fxLayout="row" class="rememberCheckBox">Remember me!</md-checkbox>
+
+    <button md-button type="submit" style="background-color:lightblue" color="white">LogIn</button>
+  </div>
+  <p style="font-size: x-small;">By Signing in you agree to T&C and Privacy Policy</p>
+</form>

@@ -1,0 +1,80 @@
+/deep/ .md-card{
+  padding: 20px;
+}
+
+.profile-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 20px;
+  width: 100%
+}
+
+.profile-menu{
+  display: flex
+}
+
+.profile-button
+{
+  height: 35px;
+  justify-content: flex-end;
+  padding-left: 10px;
+}
+
+
+.profile-image {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/53474/atom_profile_01.jpg');
+  background-size: cover;
+  width: 70px;
+  height: 70px;
+}
+
+.profile-base{
+  border: 1px solid #dddddd;
+  margin-inline-start: 20px;
+  width: 100%;
+}
+
+.preview-info{
+  display: block;
+  padding-inline-start: 10px;
+  flex-direction: column;
+  width: 100%
+}
+.profile-preview-card{
+  display: flex;
+  flex-flow: row;
+  padding: 10px;
+}
+.profile-edit-card{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  padding-block-end: 20px;
+}
+
+.edit-info{
+  display: flex;
+  padding-inline-start: 10px;
+}
+.edit-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row{
+  display: flex;
+  flex-direction: row;
+}
+.form-column{
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 10px;
+}
+
+.form-row-column{
+  display: flex;
+  flex-direction: column;
+}
