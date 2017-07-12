@@ -5,7 +5,9 @@
   display: flex;
   flex-direction: row;
 }
-
+.mainContentContainer{
+  padding: 20px;
+}
 .sidenav-container{
   display: flex;
   flex-direction: column;

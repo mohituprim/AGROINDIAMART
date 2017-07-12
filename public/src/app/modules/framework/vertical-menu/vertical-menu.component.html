@@ -1,16 +1,8 @@
-  <md-nav-list class="border-style">
-    <md-list-item>
-      <div class="menu-header">
-        <md-icon md-list-icon>{{headerIcon}}</md-icon>
-        <h3 md-line>{{listHeader}}</h3>
-        <div fxFlex></div>
-      </div>
+<md-nav-list>
+  <a *ngFor="let item of itemList" [routerLink]="item.link">
+    <md-list-item class="menu-item">
+      {{item.name}}
     </md-list-item>
     <md-divider></md-divider>
-    <div *ngFor="let item of itemList">
-      <md-list-item class="menu-item">
-        <a>{{item}}</a>
-      </md-list-item>
-      <md-divider></md-divider>
-    </div>
-  </md-nav-list>
+  </a>
+</md-nav-list>

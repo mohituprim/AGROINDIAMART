@@ -6,9 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./farmer-profile.component.css']
 })
 export class FarmerProfileComponent implements OnInit {
-  menuHeader="Account";
-  headerIcon="home";
-  items = ['My Account','My Ads','Message and Notification','Order and Payment','Ad Credit Detail'];
   showProfilePreview=true;
   states=[{code:'1',name:'UttarPradesh'},{code:'2',name:'Delhi'},{code:'3',name:'MadhyaPradesh'}]
   constructor() { }

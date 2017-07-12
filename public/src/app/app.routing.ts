@@ -5,7 +5,6 @@ import { AuthGuard } from "./services/authentication/auth-guard.service";
 import { HomeComponent } from "app/components/home/home.component";
 import { PageNotFoundComponent } from "app/components/common/page-not-found.component";
 import { DefaultContentComponent } from "app/components/default-content/default-content.component";
-// import { FarmerComponent } from "app/modules/farmer/farmer.component";
 
 const appRoutes: Routes = [
   { path: 'login', component: DefaultContentComponent },

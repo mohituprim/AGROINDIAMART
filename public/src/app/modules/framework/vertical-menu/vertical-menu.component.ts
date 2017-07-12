@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {trigger, transition, style, animate, query, stagger} from '@angular/animations';
+import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
 
 @Component({
@@ -10,8 +10,8 @@ import {trigger, transition, style, animate, query, stagger} from '@angular/anim
 export class VerticalMenuComponent implements OnInit {
 
   @Input() itemList: any;
-  @Input() listHeader:string;
-  @Input() headerIcon:string;
+  @Input() listHeader: string;
+  @Input() headerIcon: string;
 
   constructor() { }
 

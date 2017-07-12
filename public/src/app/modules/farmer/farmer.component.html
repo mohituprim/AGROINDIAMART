@@ -1,2 +1,11 @@
-<button md-raised-button [routerLink]="['/farmer', 'order']">Show Profile</button>
-<router-outlet></router-outlet>
+<div class="farmer-container">
+  <div class="farmer-menu">
+    <md-card>
+      <fw-vertical-menu [listHeader]="menuHeader" [itemList]="items" [headerIcon]='headerIcon'>
+      </fw-vertical-menu>
+    </md-card>
+  </div>
+  <div class="secondaryContainer">
+    <router-outlet></router-outlet>
+  </div>
+</div>

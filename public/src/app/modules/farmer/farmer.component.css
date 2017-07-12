@@ -1,0 +1,23 @@
+.farmer-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 20px;
+  width: 100%
+}
+.secondaryContainer{
+  display: flex;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+
+.farmer-menu{
+  display: flex;
+  border: 1px solid #dddddd;
+}
+
+/deep/ .md-card{
+  padding: 20px;
+}

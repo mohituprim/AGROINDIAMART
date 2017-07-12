@@ -1,122 +1,114 @@
-<div class="profile-container">
-  <div class="profile-menu">
-    <md-card>
-      <fw-vertical-menu [listHeader]="menuHeader" [itemList]="items" [headerIcon]='headerIcon'>
-      </fw-vertical-menu>
-    </md-card>
-  </div>
-  <div *ngIf="showProfilePreview" class="profile-base">
-    <md-card class="profile-preview-card">
-        <div md-media-sm md-card-avatar class="profile-image"></div>
-        <div class="preview-info">
-          <div><span>mohituprim@gmail.com (Hyderabad)</span></div>
-          <div>
-            <span>8527331928</span>
-            <span>mohituprim@gmail.com</span>
-            <a href="#">View All</a>
-          </div>
-          <div>
-            <span>+ Add More</span>
-            <span>+ Add More</span>
-          </div>
-        </div>
-        <div fxFlex></div>
-        <div class="profile-button">
-          <button md-raised-button (click)="OnProfileEdit()">Edit</button>
-        </div>
-    </md-card>
-  </div>
-  <div *ngIf="!showProfilePreview" class="profile-base">
-    <md-card class="profile-edit-card">
+<div *ngIf="showProfilePreview" class="profile-base">
+  <md-card class="profile-preview-card">
       <div md-media-sm md-card-avatar class="profile-image"></div>
-      <div class="edit-info">
-        <form class="edit-form">
-          <div class="form-row">
-            <div class="form-column">
-              <div class="form-row">
-                <md-input-container>
-                  <input mdInput placeholder="Name">mohit uprim
-                </md-input-container>
-              </div>
-              <div class="form-row">
-                <md-select class="padding-right20" placeholder="State" [(ngModel)]="myState" name="state">
-                  <md-option *ngFor="let state of states" [value]="state.code">{{ state.name }}</md-option>
-                </md-select>
-              </div>
-              <div class="form-row">
-                <div class="form-row-column">
-                  <div>
-                    <span>CONTACT NUMBERS</span>
-                    <button md-button>+ Add More</button>
-                  </div>
-                  <div>
-                    <md-input-container  class="padding-right20">
-                      <input type="tel" mdInput placeholder="Primary">
-                      <md-icon mdSuffix>edit</md-icon>
-                    </md-input-container>
-                  </div>
-                </div>
-              </div>
-              <div class="form-row">
-                <md-input-container>
-                  <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
-                  <button mdSuffix [mdDatepickerToggle]="picker"></button>
-                </md-input-container>
-                <md-datepicker #picker></md-datepicker>
-              </div>
-            </div>
-            <div class="form-column">
-              <div class="form-row">
-                <md-input-container>
-                  <input mdInput placeholder="City">Hyderabad
-                </md-input-container>
-              </div>
-              <div class="form-row">
-                <md-select placeholder="District" [(ngModel)]="myState" name="state">
-                  <md-option *ngFor="let state of states" [value]="state.code">{{ state.name }}</md-option>
-                </md-select>
-              </div>
-              <div class="form-row">
-                <div class="form-row-column">
-                  <div>
-                    <span>EMAIL ADDRESSES</span>
-                    <button md-button>+ Add More</button>
-                  </div>
-                  <div>
-                    <md-input-container>
-                      <input type="email" mdInput placeholder="Primary">
-                      <md-icon mdSuffix>edit</md-icon>
-                    </md-input-container>
-                  </div>
-                </div>
-              </div>
-              <div class="form-row" style="padding-top: 15px;">
-                <md-select placeholder="Gender" [(ngModel)]="gender" name="gender">
-                  <md-option [value]="gender">Male</md-option>
-                  <md-option [value]="gender">Female</md-option>
-                  <md-option [value]="gender">Other</md-option>
-                </md-select>
-              </div>
-            </div>
-          </div>
-          <div class="form-row" style="padding-inline-start: 10px; flex-grow:1">
-            <md-input-container style="padding:10px;">
-              <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
-            </md-input-container>
-          </div>
-          <div class="form-row">
-            <div style="padding-left:10px">
-              <a md-raised-button routerLink=".">Update Profile</a>
-            </div>
-            <div style="padding-left:10px">
-              <a md-raised-button routerLink=".">Change Password</a>
-            </div>
-            <div style="padding-left:10px">
-              <a md-raised-button (click)="OnCancel()">Cancel</a>
-            </div>
-          </div>
-        </form>
+      <div class="preview-info">
+        <div><span>mohituprim@gmail.com (Hyderabad)</span></div>
+        <div>
+          <span>8527331928</span>
+          <span>mohituprim@gmail.com</span>
+          <a href="#">View All</a>
+        </div>
+        <div>
+          <span>+ Add More</span>
+          <span>+ Add More</span>
+        </div>
       </div>
-    </md-card>
-  </div>
+      <div fxFlex></div>
+      <div class="profile-button">
+        <button md-raised-button (click)="OnProfileEdit()">Edit</button>
+      </div>
+  </md-card>
+</div>
+<div *ngIf="!showProfilePreview" class="profile-base">
+  <md-card class="profile-edit-card">
+    <div md-media-sm md-card-avatar class="profile-image"></div>
+    <div class="edit-info">
+      <form class="edit-form">
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-row">
+              <md-input-container>
+                <input mdInput placeholder="Name">mohit uprim
+              </md-input-container>
+            </div>
+            <div class="form-row">
+              <md-select class="padding-right20" placeholder="State" [(ngModel)]="myState" name="state">
+                <md-option *ngFor="let state of states" [value]="state.code">{{ state.name }}</md-option>
+              </md-select>
+            </div>
+            <div class="form-row">
+              <div class="form-row-column">
+                <div>
+                  <span>CONTACT NUMBERS</span>
+                  <button md-button>+ Add More</button>
+                </div>
+                <div>
+                  <md-input-container  class="padding-right20">
+                    <input type="tel" mdInput placeholder="Primary">
+                    <md-icon mdSuffix>edit</md-icon>
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <md-input-container>
+                <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+                <button mdSuffix [mdDatepickerToggle]="picker"></button>
+              </md-input-container>
+              <md-datepicker #picker></md-datepicker>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-row">
+              <md-input-container>
+                <input mdInput placeholder="City">Hyderabad
+              </md-input-container>
+            </div>
+            <div class="form-row">
+              <md-select placeholder="District" [(ngModel)]="myState" name="state">
+                <md-option *ngFor="let state of states" [value]="state.code">{{ state.name }}</md-option>
+              </md-select>
+            </div>
+            <div class="form-row">
+              <div class="form-row-column">
+                <div>
+                  <span>EMAIL ADDRESSES</span>
+                  <button md-button>+ Add More</button>
+                </div>
+                <div>
+                  <md-input-container>
+                    <input type="email" mdInput placeholder="Primary">
+                    <md-icon mdSuffix>edit</md-icon>
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="form-row" style="padding-top: 15px;">
+              <md-select placeholder="Gender" [(ngModel)]="gender" name="gender">
+                <md-option [value]="gender">Male</md-option>
+                <md-option [value]="gender">Female</md-option>
+                <md-option [value]="gender">Other</md-option>
+              </md-select>
+            </div>
+          </div>
+        </div>
+        <div class="form-row" style="padding-inline-start: 10px; flex-grow:1">
+          <md-input-container style="padding:10px;">
+            <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+          </md-input-container>
+        </div>
+        <div class="form-row">
+          <div style="padding-left:10px">
+            <a md-raised-button routerLink=".">Update Profile</a>
+          </div>
+          <div style="padding-left:10px">
+            <a md-raised-button routerLink=".">Change Password</a>
+          </div>
+          <div style="padding-left:10px">
+            <a md-raised-button (click)="OnCancel()">Cancel</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </md-card>
 </div>

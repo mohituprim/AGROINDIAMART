@@ -12,7 +12,6 @@ import 'hammerjs';
 //Component
 import { FrameworkBodyComponent } from "./framework-body/framework-body.component";
 import { SideNavComponent } from "./side-nav/side-nav.component";
-import { MainContentComponent } from "./main-content/main-content.component";
 import { LogInComponent } from "../authentication/login/login.component";
 import { RegisterComponent } from "../authentication/register/register.component";
 import { AuthenticationComponent } from "../authentication/authentication.component";
@@ -38,7 +37,6 @@ import { AuthenticationService } from "app/services/authentication/auth.service"
     FrameworkBodyComponent,
     ToolBarComponent,
     SideNavComponent,
-    MainContentComponent,
     AuthenticationComponent,
     LogInComponent,
     RegisterComponent,

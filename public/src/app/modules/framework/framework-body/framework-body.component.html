@@ -7,7 +7,9 @@
       <div class="sidenav-container" *ngIf="!authService.isLoggedIn()">
         <fw-side-nav></fw-side-nav>
       </div>
-      <div><fw-main-content></fw-main-content></div>
+      <div class="mainContentContainer">
+        <router-outlet></router-outlet>
+      </div>
     </div>
     <div fxFlex="grow" style="background-color:black;">footer</div>
   </div>

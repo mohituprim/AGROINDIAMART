@@ -2,20 +2,6 @@
   padding: 20px;
 }
 
-.profile-container{
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding: 20px;
-  width: 100%
-}
-
-.profile-menu{
-  display: flex
-}
-
 .profile-button
 {
   height: 35px;
@@ -33,7 +19,6 @@
 
 .profile-base{
   border: 1px solid #dddddd;
-  margin-inline-start: 20px;
   width: 100%;
 }
 
