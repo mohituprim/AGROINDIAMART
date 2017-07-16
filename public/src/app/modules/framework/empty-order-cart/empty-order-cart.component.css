@@ -1,0 +1,32 @@
+.emptycartContainer{
+  display: flex;
+  flex-direction: column;
+  min-block-size: 15%;
+  padding-block-start: 10px;
+  width: 100%;
+  height: 100%
+}
+
+.messageCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 50px;
+  margin-top:15px
+}
+
+.continue_shopping_order{
+  float: right;
+  color: #008bcf;
+}
+
+.empty_cart{
+  margin: 50px 200px;
+  position: relative;
+}
+
+.icon-cart {
+  font-size: 200px;
+  color: #999;
+}

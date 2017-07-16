@@ -1,0 +1,14 @@
+<md-list-item (click)="toggleSubMenu()">
+  <div class="subMenu-header">
+    <md-icon md-list-icon>{{subMenu.icon}}</md-icon>
+    <h3 md-line>{{subMenu.name}}</h3>
+    <div fxFlex></div>
+    <md-icon md-list-icon *ngIf="!subItems.length">expand_more</md-icon>
+    <md-icon md-list-icon *ngIf="subItems.length">expand_less</md-icon>
+  </div>
+</md-list-item>
+<div [@listAnimation]="subItems.length" *ngFor="let item of subItems" ng-show="subItems.length">
+  <md-list-item>
+    <a>{{item.name}}</a>
+  </md-list-item>
+</div>

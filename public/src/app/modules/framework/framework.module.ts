@@ -22,6 +22,8 @@ import { MobileSidenavComponent } from "./mobile-sidenav/mobile-sidenav.componen
 //Services
 import { AuthenticationModule } from "app/modules/authentication/authentication.module";
 import { AuthenticationService } from "app/services/authentication/auth.service";
+import { EmptyOrderCartComponent } from "app/modules/framework/empty-order-cart/empty-order-cart.component";
+import { SubMenuComponent } from "app/modules/framework/vertical-menu/sub-menu.component";
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { AuthenticationService } from "app/services/authentication/auth.service"
     LogInComponent,
     RegisterComponent,
     VerticalMenuComponent,
+    SubMenuComponent,
     MobileSidenavComponent,
+    EmptyOrderCartComponent
     //Custom Module
 
   ],
@@ -50,7 +54,8 @@ import { AuthenticationService } from "app/services/authentication/auth.service"
   ],
   exports:[
     FrameworkBodyComponent,
-    VerticalMenuComponent
+    VerticalMenuComponent,
+    EmptyOrderCartComponent
   ],
   entryComponents: [
     AuthenticationComponent

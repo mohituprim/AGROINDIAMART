@@ -1,5 +1,6 @@
 .menu-item{
-padding: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
 }
 
 /deep/ .mat-card{
@@ -8,4 +9,12 @@ padding: 10px;
 
 /deep/ .mat-nav-list{
   padding: 0px;
+}
+
+/* SubMenu CSS */
+.subMenu-header{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
 }

@@ -1,8 +1,17 @@
 <md-nav-list>
-  <a *ngFor="let item of itemList" [routerLink]="item.link">
-    <md-list-item class="menu-item">
-      {{item.name}}
-    </md-list-item>
+  <div *ngFor="let item of itemList">
+    <a *ngIf="item.link.length" [routerLink]="item.link">
+      <md-list-item>
+        <div class="subMenu-header">
+          <md-icon md-list-icon>{{item.icon}}</md-icon>
+          <h3 md-line>{{item.name}}</h3>
+          <div fxFlex></div>
+        </div>
+      </md-list-item>
+    </a>
+    <div *ngIf="!item.link.length">
+      <fw-sub-menu [subMenu]="item"></fw-sub-menu>
+    </div>
     <md-divider></md-divider>
-  </a>
+  </div>
 </md-nav-list>
