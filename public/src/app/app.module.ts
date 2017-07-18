@@ -32,7 +32,7 @@ import { DefaultContentComponent } from './components/default-content/default-co
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    DefaultContentComponent
+    DefaultContentComponent,
   ],
   imports: [
     BrowserModule,

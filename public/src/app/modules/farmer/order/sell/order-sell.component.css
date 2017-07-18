@@ -1,0 +1,12 @@
+.order-sell{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.create-order-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}

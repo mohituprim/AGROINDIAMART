@@ -2,12 +2,14 @@
   <md-card class="messageCard">
     <div>
       <span>
-            Dear Customer, there are no Active orders in your account
+            {{message}}
       </span>
-      <a class="continue_shopping_order" href="">
-            Continue Shopping
-            <span><md-icon >arrow_forward</md-icon></span>
-      </a>
+      <div class="continue_shopping_order" routerLink="">
+            <div class="display-inline">
+              <h3>Continue Shopping </h3>
+              <md-icon style="margin-top:17px;">arrow_forward</md-icon>
+            </div>
+      </div>
     </div>
   </md-card>
   <div [@flyInOut] class="empty_cart">

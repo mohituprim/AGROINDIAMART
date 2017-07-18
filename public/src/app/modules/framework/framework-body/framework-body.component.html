@@ -5,7 +5,7 @@
     </div>
     <div class="container">
       <div class="sidenav-container" *ngIf="!authService.isLoggedIn()">
-        <fw-side-nav></fw-side-nav>
+        <fw-dropdown-side-nav></fw-dropdown-side-nav>
       </div>
       <div class="mainContentContainer">
         <router-outlet></router-outlet>
@@ -14,7 +14,7 @@
     <div fxFlex="grow" style="background-color:black;">footer</div>
   </div>
   <md-sidenav #mobileSidenav class="mobile-sidenav">
-    <fw-mobile-sidenav></fw-mobile-sidenav>
+    <fw-static-sidenav [itemList]="items"></fw-static-sidenav>
   </md-sidenav>
 </md-sidenav-container>
 

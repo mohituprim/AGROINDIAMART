@@ -6,7 +6,8 @@
   flex-direction: row;
 }
 .mainContentContainer{
-  padding: 20px;
+  padding: 10px;
+  flex-grow: 1;
 }
 .sidenav-container{
   display: flex;

@@ -1,0 +1,21 @@
+<div class="sidenav-container">
+  <div *ngFor="let item of itemList">
+    <md-nav-list>
+      <md-list-item style="background: rgba(0,0,0,.32); color: hsla(0,0%,100%,.87);" >
+        <div class="menu-header">
+          <md-icon md-list-icon>{{item.icon}}</md-icon>
+          <h3 md-line>{{item.name}}</h3>
+          <div fxFlex></div>
+        </div>
+      </md-list-item>
+      <md-divider></md-divider>
+      <div *ngFor="let subMenuItem of item.subMenuItem">
+        <md-list-item class="menu-item">
+          <a>{{subMenuItem.name}}</a>
+        </md-list-item>
+        <md-divider></md-divider>
+      </div>
+    </md-nav-list>
+  </div>
+</div>
+

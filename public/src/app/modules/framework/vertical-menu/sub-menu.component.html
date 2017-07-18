@@ -8,7 +8,9 @@
   </div>
 </md-list-item>
 <div [@listAnimation]="subItems.length" *ngFor="let item of subItems" ng-show="subItems.length">
-  <md-list-item>
-    <a>{{item.name}}</a>
-  </md-list-item>
+  <a [routerLink]="item.link">
+    <md-list-item class="subMenu-item">
+      <h3 md-line>{{item.name}}</h3>
+    </md-list-item>
+  </a>
 </div>

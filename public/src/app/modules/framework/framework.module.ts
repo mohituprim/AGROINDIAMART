@@ -9,21 +9,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 
+//Services
+import { AuthenticationModule } from "app/modules/authentication/authentication.module";
+import { AuthenticationService } from "app/services/authentication/auth.service";
+
 //Component
 import { FrameworkBodyComponent } from "./framework-body/framework-body.component";
-import { SideNavComponent } from "./side-nav/side-nav.component";
 import { LogInComponent } from "../authentication/login/login.component";
 import { RegisterComponent } from "../authentication/register/register.component";
 import { AuthenticationComponent } from "../authentication/authentication.component";
 import { ToolBarComponent } from "./tool-bar/tool-bar.component";
 import { VerticalMenuComponent } from "./vertical-menu/vertical-menu.component";
-import { MobileSidenavComponent } from "./mobile-sidenav/mobile-sidenav.component";
-
-//Services
-import { AuthenticationModule } from "app/modules/authentication/authentication.module";
-import { AuthenticationService } from "app/services/authentication/auth.service";
 import { EmptyOrderCartComponent } from "app/modules/framework/empty-order-cart/empty-order-cart.component";
 import { SubMenuComponent } from "app/modules/framework/vertical-menu/sub-menu.component";
+import { StaticSidenavComponent } from "app/modules/framework/static-sidenav/static-sidenav.component";
+import { DropDownSideNavComponent } from "app/modules/framework/dropdown-side-nav/dropdown-side-nav.component";
 
 
 @NgModule({
@@ -38,13 +38,13 @@ import { SubMenuComponent } from "app/modules/framework/vertical-menu/sub-menu.c
   declarations: [
     FrameworkBodyComponent,
     ToolBarComponent,
-    SideNavComponent,
+    DropDownSideNavComponent,
     AuthenticationComponent,
     LogInComponent,
     RegisterComponent,
     VerticalMenuComponent,
     SubMenuComponent,
-    MobileSidenavComponent,
+    StaticSidenavComponent,
     EmptyOrderCartComponent
     //Custom Module
 
@@ -55,7 +55,8 @@ import { SubMenuComponent } from "app/modules/framework/vertical-menu/sub-menu.c
   exports:[
     FrameworkBodyComponent,
     VerticalMenuComponent,
-    EmptyOrderCartComponent
+    EmptyOrderCartComponent,
+    StaticSidenavComponent
   ],
   entryComponents: [
     AuthenticationComponent

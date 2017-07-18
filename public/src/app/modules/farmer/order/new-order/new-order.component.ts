@@ -1,15 +1,13 @@
-import { Component, OnInit} from '@angular/core';
-import { AuthenticationService } from "app/services/authentication/auth.service";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'fw-framework-body',
-  templateUrl: './framework-body.component.html',
-  styleUrls: ['./framework-body.component.css']
+  selector: 'app-new-order',
+  templateUrl: './new-order.component.html',
+  styleUrls: ['./new-order.component.css']
 })
-export class FrameworkBodyComponent implements OnInit {
-  constructor(private authService:AuthenticationService ){ }
+export class NewOrderComponent implements OnInit {
 
-  items = [
+    produceItem = [
     {name:'Buy/Sell',
       link:'',
       subMenuItem:[
@@ -33,7 +31,9 @@ export class FrameworkBodyComponent implements OnInit {
       icon:'settings'
     }
   ];
-  ngOnInit() {
+  constructor() { }
 
+  ngOnInit() {
   }
+
 }

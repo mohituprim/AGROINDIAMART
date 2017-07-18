@@ -18,3 +18,11 @@ padding-bottom: 10px;
   flex-grow: 1;
   align-items: center;
 }
+
+.subMenu-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px;
+  height: 24px;
+}

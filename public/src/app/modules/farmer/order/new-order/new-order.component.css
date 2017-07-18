@@ -19,7 +19,3 @@
   display: flex;
   border: 1px solid #dddddd;
 }
-
-/deep/ .md-card{
-  padding: 20px;
-}

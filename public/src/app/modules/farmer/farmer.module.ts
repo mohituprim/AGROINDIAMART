@@ -22,11 +22,21 @@ import { FarmerComponent } from './farmer.component';
 import { FarmerOrderComponent } from "app/modules/farmer/order/farmer-order.component";
 import { FarmerProfileComponent } from "app/modules/farmer/profile/farmer-profile.component";
 import { FarmerRoutingModule } from "app/modules/farmer/farmer.routing";
+import { OrderBuyComponent } from "app/modules/farmer/order/buy/order-buy.component";
+import { OrderRentComponent } from "app/modules/farmer/order/rent/order-rent.component";
+import { OrderSellComponent } from "app/modules/farmer/order/sell/order-sell.component";
+import { OrderServicesComponent } from "app/modules/farmer/order/services/order-services.component";
+import { NewOrderComponent } from "app/modules/farmer/order/new-order/new-order.component";
 
 @NgModule({
   declarations: [
     FarmerComponent,
     FarmerOrderComponent,
+    OrderBuyComponent,
+    OrderRentComponent,
+    OrderSellComponent,
+    OrderServicesComponent,
+    NewOrderComponent,
     FarmerProfileComponent
   ],
   imports: [

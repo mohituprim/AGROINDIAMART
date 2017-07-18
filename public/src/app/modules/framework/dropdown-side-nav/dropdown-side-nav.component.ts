@@ -3,16 +3,16 @@ import {trigger, transition, style, animate, query, stagger} from '@angular/anim
 
 
 @Component({
-  selector: 'fw-side-nav',
-  templateUrl: './side-nav.component.html',
-  styleUrls: ['./side-nav.component.css'],
+  selector: 'fw-dropdown-side-nav',
+  templateUrl: './dropdown-side-nav.component.html',
+  styleUrls: ['./dropdown-side-nav.component.css'],
   animations: [
     trigger('listAnimation', [
        //...
     ])
   ]
 })
-export class SideNavComponent implements OnInit {
+export class DropDownSideNavComponent implements OnInit {
 
   marketListHeader="Buy/Sell";
   marketHeaderIcon="shopping_cart";
