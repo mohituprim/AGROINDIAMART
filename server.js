@@ -46,12 +46,7 @@ class Server {
         app.use(function (req, res, next) {
             res.header('Access-Control-Allow-Origin', '*');
             res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-            res.header('Access-Control-Allow-Headers', '*');
-            // Request headers you wish to allow
-            req.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-            // Set to true if you need the website to include cookies in the requests sent
-            // to the API (e.g. in case you use sessions)
-            res.setHeader('Access-Control-Allow-Credentials', true);
+            res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
             next();
         });
         require('./api/config/passport')(app);
@@ -79,7 +74,7 @@ class Server {
     }
 
     initRoutes() {
-        router.load(app, './controllers');
+        router.load(app, router);
         app.all('/*', (req, res) => {
             res.sendFile(path.join(__dirname+'/public/dist','index.html'))
         });

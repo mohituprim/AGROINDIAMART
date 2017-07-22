@@ -27,6 +27,8 @@ import { OrderRentComponent } from "app/modules/farmer/order/rent/order-rent.com
 import { OrderSellComponent } from "app/modules/farmer/order/sell/order-sell.component";
 import { OrderServicesComponent } from "app/modules/farmer/order/services/order-services.component";
 import { NewOrderComponent } from "app/modules/farmer/order/new-order/new-order.component";
+import { CreateOrderComponent } from "app/modules/farmer/order/new-order/create-order/create-order.component";
+import { FarmerService } from "app/services/farmer/farmer.service";
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { NewOrderComponent } from "app/modules/farmer/order/new-order/new-order.
     OrderRentComponent,
     OrderSellComponent,
     OrderServicesComponent,
+    CreateOrderComponent,
     NewOrderComponent,
     FarmerProfileComponent
   ],
@@ -56,7 +59,8 @@ import { NewOrderComponent } from "app/modules/farmer/order/new-order/new-order.
   providers: [
     AuthenticationService,//equivalent to ---{provide: UserApi, useClass: UserService }
     { provide: AuthenticationApi, useExisting: AuthenticationService },
-    AuthGuard
+    AuthGuard,
+    FarmerService
   ]
 })
 export class FarmerModule { }

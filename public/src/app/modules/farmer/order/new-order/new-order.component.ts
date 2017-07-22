@@ -8,25 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class NewOrderComponent implements OnInit {
 
     produceItem = [
-    {name:'Buy/Sell',
+    {name:'Sell Crop Product',
       link:'',
       subMenuItem:[
-                    {name:'Agriculture Product', link:'/farmer/order/buy'},
-                    {name:'Machinary', link:'/farmer/order/sell'},
-                    {name:'Fertilizer', link:'/farmer/order/services'},
-                    {name:'Agriculture Land', link:'/farmer/order/rent'},
-                    {name:'Spare-Parts', link:'/farmer/order/rent'}
+                    {name:'Crop Commodities', link:'/farmer/neworder/create/crop'},
+                    {name:'Finished Commodities', link:'/farmer/neworder/create/finished'},
+                    {name:'Fruits/Flowers/Vegetables', link:'/farmer/neworder/create/ffv'},
+                    {name:'Fisheries and Aqua', link:'/farmer/neworder/create/aqua'},
+                    {name:'Handicrafts, Khadi and Others', link:'/farmer/neworder/create/others'}
                   ],
        icon:'shopping_cart'
     },
-    {name:'Services',
+    {name:'Sell Other Product ',
       link:'',
       subMenuItem:[
-                    {name:'Transportation', link:''},
-                    {name:'WareHousing', link:''},
-                    {name:'Financing', link:''},
-                    {name:'Machine-Repairing', link:''},
-                    {name:'Consulting', link:''}
+                    {name:'LiveStock/Cattle', link:'/farmer/neworder/create/cattle'},
+                    {name:'Farm Equipments', link:'/farmer/neworder/create/farm'},
+                    {name:'Land/ Garden', link:'/farmer/neworder/create/land'},
+                    {name:'Machine-Repairing', link:'/farmer/neworder/create/machine'},
+                    {name:'Seeds/Seedlings', link:'/farmer/neworder/create/seeds'}
                   ],
       icon:'settings'
     }

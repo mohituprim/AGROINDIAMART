@@ -6,6 +6,7 @@ const   fs      = require('fs'),
         auth    = require('./api_routes/authentication/auth');
         register    = require('./api_routes/authentication/register');
         login    = require('./api_routes/authentication/login');
+        farmer    = require('./api_routes/farmer/sell-order');
 
 class Router {
 
@@ -20,6 +21,7 @@ class Router {
         app.use('/home', index);
         app.use('/users', users);
         app.use('/auth', auth);
+        app.use('/farmer', farmer);
         // app.use('/register', register);
         // app.use('/login', login);
     }

@@ -33,13 +33,13 @@ export class AuthenticationService implements AuthenticationApi {
     this.currentUser = {
       userName: logInUser.userName
     }
-    // return this.http.post('http://localhost:3000/auth/login',
-    //   JSON.stringify(logInUser),
-    //   options
-    // )
-    // .map((resp: Response) => resp.json())
-    // .catch(this.handleError);;
-    return Observable.of({}).delay(2000);
+    return this.http.post('http://localhost:3000/auth/login',
+      JSON.stringify(logInUser),
+      options
+    )
+    .map((resp: Response) => resp.json())
+    .catch(this.handleError);
+    //return Observable.of({}).delay(2000);
     // return Observable.of({}).delay(2000).flatMap(x=>Observable.throw('Invalid User Name and/or Password'));
   }
 

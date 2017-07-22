@@ -12,6 +12,7 @@ import { OrderRentComponent } from "app/modules/farmer/order/rent/order-rent.com
 import { OrderSellComponent } from "app/modules/farmer/order/sell/order-sell.component";
 import { OrderBuyComponent } from "app/modules/farmer/order/buy/order-buy.component";
 import { NewOrderComponent } from "app/modules/farmer/order/new-order/new-order.component";
+import { CreateOrderComponent } from "app/modules/farmer/order/new-order/create-order/create-order.component";
 
 const farmerRoutes: Routes = [
   {
@@ -28,7 +29,7 @@ const farmerRoutes: Routes = [
       },
       {
         path: 'order',
-                component: FarmerComponent,
+        component: FarmerComponent,
         children: [
               { path: '', redirectTo: 'buy', pathMatch: 'full' },
               { path: 'buy', component: OrderBuyComponent },
@@ -40,6 +41,10 @@ const farmerRoutes: Routes = [
       {
         path: 'neworder',
         component: NewOrderComponent,
+        children: [
+              { path: '', redirectTo: 'create/crop', pathMatch: 'full' },
+              { path: 'create/:category', component: CreateOrderComponent },
+        ]
       }
     ]
   }

@@ -10,6 +10,9 @@ var createSendToken = require('../../config/jwt.js');
         // LOGIN ===============================
         // show the login form
         // process the login form
+        router.get('/logintest', function (req, res) {
+            console.log('test');
+        });
         router.post('/login', passport.authenticate('local-login'), function (req, res) {
             createSendToken(req.body.userName, res);
         });

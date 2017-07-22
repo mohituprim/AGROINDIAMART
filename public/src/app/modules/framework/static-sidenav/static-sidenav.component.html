@@ -9,7 +9,7 @@
         </div>
       </md-list-item>
       <md-divider></md-divider>
-      <div *ngFor="let subMenuItem of item.subMenuItem">
+      <div *ngFor="let subMenuItem of item.subMenuItem" routerLink="{{subMenuItem.link}}">
         <md-list-item class="menu-item">
           <a>{{subMenuItem.name}}</a>
         </md-list-item>

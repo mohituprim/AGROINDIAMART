@@ -1,0 +1,57 @@
+<div class="order-base">
+  <md-card class="order-edit-card">
+    <div class="title-row">{{title}}</div>
+    <md-divider></md-divider>
+    <div class="edit-info">
+      <form class="edit-form">
+        <div class="form-row">
+          <div class="form-column padding-right20">
+              <md-select class="same_Width" placeholder="Select Sub Category" [(ngModel)]="newSellOrder.productSubCategory" name="subCategory">
+                <md-option *ngFor="let subcategory of subCategory" [value]="subcategory">{{ subcategory }}</md-option>
+              </md-select>
+              <md-select class="same_Width" placeholder="Select variety" [(ngModel)]="newSellOrder.variety" name="variety">
+                <md-option *ngFor="let v of variety" [value]="v">{{ v }}</md-option>
+              </md-select>
+              <md-input-container class="same_Width">
+                <input mdInput placeholder="No Of Units" value="123XXX" [(ngModel)]="newSellOrder.noOfUnit" name="noOfUnit">
+              </md-input-container>
+          </div>
+          <div class="form-column padding-right20">
+            <md-select class="same_Width" placeholder="Select Type" [(ngModel)]="newSellOrder.productType" name="producttype">
+              <md-option *ngFor="let t of type" [value]="t">{{ t }}</md-option>
+            </md-select>
+            <md-select class="same_Width" placeholder="Select Units" [(ngModel)]="newSellOrder.productUnitType" name="productunit">
+              <md-option *ngFor="let u of units" [value]="u">{{ u }}</md-option>
+            </md-select>
+            <md-input-container class="same_Width">
+              <input mdInput placeholder="Rate Per Unit" value="200XXX" [(ngModel)]="newSellOrder.ratePerUnit" name="productrate">
+            </md-input-container>
+          </div>
+        </div>
+        <div class="form-row">
+          <md-input-container>
+            <input mdInput [mdDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="newSellOrder.orderDate" name="orderDate">
+            <button mdSuffix [mdDatepickerToggle]="picker"></button>
+          </md-input-container>
+          <md-datepicker #picker></md-datepicker>
+        </div>
+        <div class="form-row">
+          <md-input-container class="grow">
+            <textarea mdInput placeholder="Description" [(ngModel)]="newSellOrder.description" name="description">1600 Amphitheatre Pkwy</textarea>
+          </md-input-container>
+        </div>
+        <div class="form-row">
+        <div>
+          <a color="primary" md-raised-button (click)="OnAddNewOrder()">Add New Order</a>
+          <span class="spacer"></span>
+        </div>
+        <div fxFlex></div>
+        <div>
+          <a color="primary" md-raised-button (click)="OnReset()">Reset</a>
+          <span class="spacer"></span>
+        </div>
+        </div>
+      </form>
+    </div>
+  </md-card>
+</div>
