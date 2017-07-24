@@ -48,7 +48,7 @@ export class FarmerService {
     saveSellOrder(order: IFarmerSellOrder){
       var headers = new Headers({ 'Content-Type': 'application/json' });
       var options = new RequestOptions({ headers: headers });
-      return this.http.post('http://localhost:3000/farmer/order/sell',
+      return this.http.post('http://localhost:3000/farmer/order/sell/save',
       JSON.stringify(order),
       options
     )
@@ -62,7 +62,7 @@ export class FarmerService {
 
     private createSellOrder(order: IFarmerSellOrder, options: RequestOptions): Observable<IFarmerSellOrder> {
         order.id = undefined;
-        return this.http.post('http://localhost:3000/farmer/order/sell', order, options)
+        return this.http.post('http://localhost:3000/farmer/order/sell/save', order, options)
             .map(this.extractData)
             .do(data => console.log('createOrder: ' + JSON.stringify(data)))
             .catch(this.handleError);

@@ -13,6 +13,7 @@
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   overflow: hidden;
+  width: 100%;
 }
 
 .farmer-menu{

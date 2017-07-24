@@ -5,7 +5,9 @@
   </div>
   <md-divider></md-divider>
   <md-tab-group>
-    <md-tab label="Active Order">Content 1</md-tab>
+    <md-tab label="Active Order">
+      <fw-framework-table [dataSourceInput]="ordersList"></fw-framework-table>
+    </md-tab>
     <md-tab label="Completed Order">Content 2</md-tab>
   </md-tab-group>
 </div>

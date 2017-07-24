@@ -1,3 +1,6 @@
+:host(farmer-order-sell){
+  width: 100%;
+}
 .order-sell{
   display: flex;
   flex-direction: column;

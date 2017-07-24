@@ -3325,7 +3325,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".farmer-container{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-pack: distribute;\r\n      justify-content: space-around;\r\n  -webkit-box-align: start;\r\n      -ms-flex-align: start;\r\n          align-items: flex-start;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -ms-flex-wrap: nowrap;\r\n      flex-wrap: nowrap;\r\n  padding: 10px;\r\n  width: 100%;\r\n  height:100%;\r\n}\r\n.secondaryContainer{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-padding-start: 10px;\r\n          padding-inline-start: 10px;\r\n  -webkit-padding-end: 10px;\r\n          padding-inline-end: 10px;\r\n  overflow: hidden;\r\n}\r\n\r\n.farmer-menu{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  border: 1px solid #dddddd;\r\n}\r\n\r\n/deep/ .md-card{\r\n  padding: 20px;\r\n}\r\n", ""]);
+exports.push([module.i, ".farmer-container{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-pack: distribute;\r\n      justify-content: space-around;\r\n  -webkit-box-align: start;\r\n      -ms-flex-align: start;\r\n          align-items: flex-start;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -ms-flex-wrap: nowrap;\r\n      flex-wrap: nowrap;\r\n  padding: 10px;\r\n  width: 100%;\r\n  height:100%;\r\n}\r\n.secondaryContainer{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-padding-start: 10px;\r\n          padding-inline-start: 10px;\r\n  -webkit-padding-end: 10px;\r\n          padding-inline-end: 10px;\r\n  overflow: hidden;\r\n  width: 100%;\r\n}\r\n\r\n.farmer-menu{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  border: 1px solid #dddddd;\r\n}\r\n\r\n/deep/ .md-card{\r\n  padding: 20px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -3338,7 +3338,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/modules/farmer/farmer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"farmer-container\">\n  <div class=\"farmer-menu\">\n    <md-card>\n      <fw-vertical-menu [itemList]=\"items\">\n      </fw-vertical-menu>\n    </md-card>\n  </div>\n  <div class=\"secondaryContainer\">\n    <router-outlet></router-outlet>\n  </div>\n  <div fxFlex></div>\n</div>\n"
+module.exports = "<div class=\"farmer-container\">\n  <div class=\"farmer-menu\">\n    <md-card>\n      <fw-vertical-menu [itemList]=\"items\">\n      </fw-vertical-menu>\n    </md-card>\n  </div>\n  <div class=\"secondaryContainer\" style=\"width:100%\">\n    <router-outlet ></router-outlet>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -4018,7 +4018,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".order-sell{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-pack: start;\r\n      -ms-flex-pack: start;\r\n          justify-content: flex-start;\r\n}\r\n\r\n.create-order-button{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -webkit-box-pack: start;\r\n      -ms-flex-pack: start;\r\n          justify-content: flex-start;\r\n  margin-bottom: 15px;\r\n}\r\n", ""]);
+exports.push([module.i, ":host(farmer-order-sell){\r\n  width: 100%;\r\n}\r\n.order-sell{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  -webkit-box-pack: start;\r\n      -ms-flex-pack: start;\r\n          justify-content: flex-start;\r\n}\r\n\r\n.create-order-button{\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -webkit-box-pack: start;\r\n      -ms-flex-pack: start;\r\n          justify-content: flex-start;\r\n  margin-bottom: 15px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -4031,7 +4031,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/modules/farmer/order/sell/order-sell.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"order-sell\">\n  <div class=\"create-order-button\">\n    <a color=\"primary\" md-raised-button routerLink=\"/farmer/neworder\">Create New Order</a>\n    <span class=\"spacer\"></span>\n  </div>\n  <md-divider></md-divider>\n  <md-tab-group>\n    <md-tab label=\"Active Order\">Content 1</md-tab>\n    <md-tab label=\"Completed Order\">Content 2</md-tab>\n  </md-tab-group>\n</div>\n"
+module.exports = "<div class=\"order-sell\">\n  <div class=\"create-order-button\">\n    <a color=\"primary\" md-raised-button routerLink=\"/farmer/neworder\">Create New Order</a>\n    <span class=\"spacer\"></span>\n  </div>\n  <md-divider></md-divider>\n  <md-tab-group>\n    <md-tab label=\"Active Order\">\n      <fw-framework-table [dataSourceInput]=\"ordersList\"></fw-framework-table>\n    </md-tab>\n    <md-tab label=\"Completed Order\">Content 2</md-tab>\n  </md-tab-group>\n</div>\n"
 
 /***/ }),
 
@@ -4053,6 +4053,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var OrderSellComponent = (function () {
     function OrderSellComponent() {
+        this.ordersList = [{ id: '1', productCode: '123' }];
     }
     OrderSellComponent.prototype.ngOnInit = function () {
     };
@@ -4480,6 +4481,168 @@ var _a;
 
 /***/ }),
 
+/***/ "./src/app/modules/framework/framework-table/framework-table.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* Structure */\r\n.example-container {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  max-height: 500px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: baseline;\r\n      -ms-flex-align: baseline;\r\n          align-items: baseline;\r\n  padding: 8px 24px 0;\r\n  font-size: 20px;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\r\n}\r\n\r\n.mat-input-container {\r\n  font-size: 14px;\r\n  -webkit-box-flex: 1;\r\n      -ms-flex-positive: 1;\r\n          flex-grow: 1;\r\n  margin-left: 32px;\r\n}\r\n\r\n.mat-table {\r\n  overflow: auto;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "./src/app/modules/framework/framework-table/framework-table.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"example-container mat-elevation-z8\">\n  <md-table #table [dataSource]=\"dataSource\">\n    <ng-container *ngFor=\"let item of displayedColumns\" cdkColumnDef=\"{{item}}\">\n      <md-header-cell *cdkHeaderCellDef>{{getColumnHeaderName(item)}}</md-header-cell>\n      <md-cell *cdkCellDef=\"let row\">{{row[item]}}</md-cell>\n    </ng-container>\n    <md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row>\n    <md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row>\n  </md-table>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/modules/framework/framework-table/framework-table.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_cdk__ = __webpack_require__("./node_modules/@angular/cdk/@angular/cdk.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/BehaviorSubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__ = __webpack_require__("./node_modules/rxjs/add/operator/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_merge__ = __webpack_require__("./node_modules/rxjs/add/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_merge__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime__ = __webpack_require__("./node_modules/rxjs/add/operator/debounceTime.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_debounceTime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__("./node_modules/rxjs/add/operator/distinctUntilChanged.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_distinctUntilChanged__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_fromEvent__ = __webpack_require__("./node_modules/rxjs/add/observable/fromEvent.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_fromEvent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_fromEvent__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FrameworkTableComponent; });
+/* unused harmony export ExampleDatabase */
+/* unused harmony export ExampleDataSource */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var FrameworkTableComponent = (function () {
+    function FrameworkTableComponent() {
+        // displayedColumns = ['id', 'productCode'];
+        // exampleDatabase = new ExampleDatabase();
+        // dataSource: ExampleDataSource | null;
+        this.displayedColumns = ['id', 'name', 'progress'];
+        this.test = [{ color: "yellow", id: "1", name: "Atticus I.", progress: "30" }];
+        this.exampleDatabase = new ExampleDatabase(this.test);
+    }
+    FrameworkTableComponent.prototype.ngOnInit = function () {
+        console.log(this.exampleDatabase);
+        this.dataSource = new ExampleDataSource(this.exampleDatabase);
+    };
+    FrameworkTableComponent.prototype.getColumnHeaderName = function (item) {
+        return item.toUpperCase();
+    };
+    return FrameworkTableComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Input */])(),
+    __metadata("design:type", Object)
+], FrameworkTableComponent.prototype, "dataSourceInput", void 0);
+FrameworkTableComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* Component */])({
+        selector: 'fw-framework-table',
+        template: __webpack_require__("./src/app/modules/framework/framework-table/framework-table.component.html"),
+        styles: [__webpack_require__("./src/app/modules/framework/framework-table/framework-table.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], FrameworkTableComponent);
+
+/** An example database that the data source uses to retrieve data for the table. */
+var ExampleDatabase = (function () {
+    function ExampleDatabase(test) {
+        /** Stream that emits whenever the data has been modified. */
+        this.dataChange = new __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
+        // Fill up the database with 100 users.
+        console.log(this);
+        for (var i = 0; i < 1; i++) {
+            this.addUser(test);
+        }
+    }
+    Object.defineProperty(ExampleDatabase.prototype, "data", {
+        get: function () { return this.dataChange.value; },
+        enumerable: true,
+        configurable: true
+    });
+    /** Adds a new user to the database. */
+    ExampleDatabase.prototype.addUser = function (test) {
+        var copiedData = this.data.slice();
+        //copiedData.push({color:"yellow", id:"1",name:"Atticus I.",progress:"30"});
+        //copiedData.push({color:"yellow", id:"1",name:"Atticus I.",progress:"30"});
+        copiedData.push(test);
+        console.log(copiedData);
+        this.dataChange.next(copiedData);
+    };
+    return ExampleDatabase;
+}());
+
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+var ExampleDataSource = (function (_super) {
+    __extends(ExampleDataSource, _super);
+    function ExampleDataSource(_exampleDatabase) {
+        var _this = _super.call(this) || this;
+        _this._exampleDatabase = _exampleDatabase;
+        console.log('exd');
+        return _this;
+    }
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
+    ExampleDataSource.prototype.connect = function () {
+        return this._exampleDatabase.dataChange;
+    };
+    ExampleDataSource.prototype.disconnect = function () { };
+    return ExampleDataSource;
+}(__WEBPACK_IMPORTED_MODULE_1__angular_cdk__["b" /* DataSource */]));
+
+//# sourceMappingURL=framework-table.component.js.map
+
+/***/ }),
+
 /***/ "./src/app/modules/framework/framework.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4504,6 +4667,8 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_app_modules_framework_vertical_menu_sub_menu_component__ = __webpack_require__("./src/app/modules/framework/vertical-menu/sub-menu.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_app_modules_framework_static_sidenav_static_sidenav_component__ = __webpack_require__("./src/app/modules/framework/static-sidenav/static-sidenav.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_app_modules_framework_dropdown_side_nav_dropdown_side_nav_component__ = __webpack_require__("./src/app/modules/framework/dropdown-side-nav/dropdown-side-nav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_app_modules_framework_framework_table_framework_table_component__ = __webpack_require__("./src/app/modules/framework/framework-table/framework-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_cdk__ = __webpack_require__("./node_modules/@angular/cdk/@angular/cdk.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FrameworkModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4532,6 +4697,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var FrameworkModule = (function () {
     function FrameworkModule() {
     }
@@ -4544,6 +4711,7 @@ FrameworkModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_material__["a" /* MaterialModule */],
+            __WEBPACK_IMPORTED_MODULE_20__angular_cdk__["a" /* CdkTableModule */],
             __WEBPACK_IMPORTED_MODULE_6__angular_flex_layout__["FlexLayoutModule"],
             __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */]
         ],
@@ -4557,7 +4725,8 @@ FrameworkModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_14__vertical_menu_vertical_menu_component__["a" /* VerticalMenuComponent */],
             __WEBPACK_IMPORTED_MODULE_16_app_modules_framework_vertical_menu_sub_menu_component__["a" /* SubMenuComponent */],
             __WEBPACK_IMPORTED_MODULE_17_app_modules_framework_static_sidenav_static_sidenav_component__["a" /* StaticSidenavComponent */],
-            __WEBPACK_IMPORTED_MODULE_15_app_modules_framework_empty_order_cart_empty_order_cart_component__["a" /* EmptyOrderCartComponent */]
+            __WEBPACK_IMPORTED_MODULE_15_app_modules_framework_empty_order_cart_empty_order_cart_component__["a" /* EmptyOrderCartComponent */],
+            __WEBPACK_IMPORTED_MODULE_19_app_modules_framework_framework_table_framework_table_component__["a" /* FrameworkTableComponent */]
             //Custom Module
         ],
         providers: [
@@ -4567,7 +4736,8 @@ FrameworkModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_9__framework_body_framework_body_component__["a" /* FrameworkBodyComponent */],
             __WEBPACK_IMPORTED_MODULE_14__vertical_menu_vertical_menu_component__["a" /* VerticalMenuComponent */],
             __WEBPACK_IMPORTED_MODULE_15_app_modules_framework_empty_order_cart_empty_order_cart_component__["a" /* EmptyOrderCartComponent */],
-            __WEBPACK_IMPORTED_MODULE_17_app_modules_framework_static_sidenav_static_sidenav_component__["a" /* StaticSidenavComponent */]
+            __WEBPACK_IMPORTED_MODULE_17_app_modules_framework_static_sidenav_static_sidenav_component__["a" /* StaticSidenavComponent */],
+            __WEBPACK_IMPORTED_MODULE_19_app_modules_framework_framework_table_framework_table_component__["a" /* FrameworkTableComponent */]
         ],
         entryComponents: [
             __WEBPACK_IMPORTED_MODULE_12__authentication_authentication_component__["a" /* AuthenticationComponent */]
@@ -4977,10 +5147,13 @@ var AuthenticationService = (function () {
         this.currentUser = {
             userName: logInUser.userName
         };
-        return this.http.post('http://localhost:3000/auth/login', JSON.stringify(logInUser), options)
-            .map(function (resp) { return resp.json(); })
-            .catch(this.handleError);
-        //return Observable.of({}).delay(2000);
+        // return this.http.post('http://localhost:3000/auth/login',
+        //   JSON.stringify(logInUser),
+        //   options
+        // )
+        // .map((resp: Response) => resp.json())
+        // .catch(this.handleError);
+        return __WEBPACK_IMPORTED_MODULE_5_rxjs_Rx__["Observable"].of({}).delay(2000);
         // return Observable.of({}).delay(2000).flatMap(x=>Observable.throw('Invalid User Name and/or Password'));
     };
     AuthenticationService.prototype.register = function (registerUser) {
@@ -5098,7 +5271,7 @@ var FarmerService = (function () {
     FarmerService.prototype.saveSellOrder = function (order) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({ headers: headers });
-        return this.http.post('http://localhost:3000/farmer/order/sell', JSON.stringify(order), options)
+        return this.http.post('http://localhost:3000/farmer/order/sell/save', JSON.stringify(order), options)
             .map(function (resp) { return resp.json(); })
             .catch(this.handleError);
         // if (order.id === 0) {
@@ -5108,7 +5281,7 @@ var FarmerService = (function () {
     };
     FarmerService.prototype.createSellOrder = function (order, options) {
         order.id = undefined;
-        return this.http.post('http://localhost:3000/farmer/order/sell', order, options)
+        return this.http.post('http://localhost:3000/farmer/order/sell/save', order, options)
             .map(this.extractData)
             .do(function (data) { return console.log('createOrder: ' + JSON.stringify(data)); })
             .catch(this.handleError);

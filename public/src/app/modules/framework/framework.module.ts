@@ -24,6 +24,8 @@ import { EmptyOrderCartComponent } from "app/modules/framework/empty-order-cart/
 import { SubMenuComponent } from "app/modules/framework/vertical-menu/sub-menu.component";
 import { StaticSidenavComponent } from "app/modules/framework/static-sidenav/static-sidenav.component";
 import { DropDownSideNavComponent } from "app/modules/framework/dropdown-side-nav/dropdown-side-nav.component";
+import { FrameworkTableComponent } from "app/modules/framework/framework-table/framework-table.component";
+import { CdkTableModule } from "@angular/cdk";
 
 
 @NgModule({
@@ -32,6 +34,7 @@ import { DropDownSideNavComponent } from "app/modules/framework/dropdown-side-na
     RouterModule,
     FormsModule,
     MaterialModule,
+    CdkTableModule,
     FlexLayoutModule,
     BrowserAnimationsModule
   ],
@@ -45,7 +48,8 @@ import { DropDownSideNavComponent } from "app/modules/framework/dropdown-side-na
     VerticalMenuComponent,
     SubMenuComponent,
     StaticSidenavComponent,
-    EmptyOrderCartComponent
+    EmptyOrderCartComponent,
+    FrameworkTableComponent
     //Custom Module
 
   ],
@@ -56,7 +60,8 @@ import { DropDownSideNavComponent } from "app/modules/framework/dropdown-side-na
     FrameworkBodyComponent,
     VerticalMenuComponent,
     EmptyOrderCartComponent,
-    StaticSidenavComponent
+    StaticSidenavComponent,
+    FrameworkTableComponent
   ],
   entryComponents: [
     AuthenticationComponent

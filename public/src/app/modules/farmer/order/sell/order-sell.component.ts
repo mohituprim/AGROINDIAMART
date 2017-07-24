@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderSellComponent implements OnInit {
 
-  constructor() { }
+  ordersList:any;
+  constructor() {
+    this.ordersList=[{id:'1',productCode:'123'}]
+   }
 
   ngOnInit() {
   }
