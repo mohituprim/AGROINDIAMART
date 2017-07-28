@@ -1,27 +1,32 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Launch Chrome against localhost, with sourcemaps",
-            "type": "chrome",
-            "request": "launch",
-            "url": "http://localhost:4200",
-            "sourceMaps": true,
-            "sourceMapPathOverrides": {
-               "webpack:///C:/Users/mohit/Desktop/agroindiamart/public/*": "${workspaceRoot}/*"
-            },            
-            "webRoot": "${workspaceRoot}"
-        },
-        {
-            "name": "Attach to Chrome, with sourcemaps",
-            "type": "chrome",
-            "request": "attach",
-            "port": 9222,
-            "sourceMaps": true,
-            "sourceMapPathOverrides": {
-               "webpack:///C:/Users/mohit/Desktop/agroindiamart/public/*": "${workspaceRoot}/*"
-            },           
-            "webRoot": "${workspaceRoot}"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceRoot}/public/src",
+      "sourceMaps": true,
+      "userDataDir": "${workspaceRoot}/.vscode/chrome",
+      "runtimeArgs": [
+        "--disable-session-crashed-bubble"
+      ],
+    "sourceMapPathOverrides": {
+                "webpack:///C:*": "C:/*"
+            }
+    },
+    {
+      "name": "Attach Chrome",
+      "type": "chrome",
+      "request": "attach",
+      "url": "http://localhost:4200",
+      "port": 9222,
+      "webRoot": "${workspaceRoot}/public/src",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+                "webpack:///C:*": "C:/*"
+            }
+    }
+  ]
 }

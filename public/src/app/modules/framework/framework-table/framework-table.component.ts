@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild, Input } from '@angular/core';
-import {DataSource} from '@angular/cdk';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-import {Observable} from 'rxjs/Observable';
+import { DataSource } from '@angular/cdk';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/map';
@@ -15,23 +15,18 @@ import 'rxjs/add/observable/fromEvent';
   styleUrls: ['./framework-table.component.css']
 })
 export class FrameworkTableComponent {
-  @Input() dataSourceInput:any;
-  // displayedColumns = ['id', 'productCode'];
-  // exampleDatabase = new ExampleDatabase();
-  // dataSource: ExampleDataSource | null;
-displayedColumns = ['id', 'name', 'progress'];
-test=[{color:"yellow", id:"1",name:"Atticus I.",progress:"30"}];
-exampleDatabase:any;
-dataSource: ExampleDataSource | null;
-constructor(){
-  this.exampleDatabase = new ExampleDatabase(this.test);
+  @Input() dataSourceInput: any;
+  @Input() displayedColumns: any;
 
-}
+  exampleDatabase: ExampleDatabase | null;
+  dataSource: ExampleDataSource | null;
+
   ngOnInit() {
-    console.log(this.exampleDatabase);
+    this.exampleDatabase = new ExampleDatabase(this.dataSourceInput);
     this.dataSource = new ExampleDataSource(this.exampleDatabase);
   }
-  getColumnHeaderName(item:string){
+  
+  getColumnHeaderName(item: string) {
     return item.toUpperCase();
   }
 }
@@ -42,20 +37,13 @@ export class ExampleDatabase {
   dataChange: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
   get data(): any[] { return this.dataChange.value; }
 
-  constructor(test:any) {
-    // Fill up the database with 100 users.
-    console.log(this);
-    for (let i = 0; i < 1; i++) { this.addUser(test); }
+  constructor(private dataSourceInput: any[]) {
+    this.addTableData(this.dataSourceInput);
   }
 
-  /** Adds a new user to the database. */
-  addUser(test:any) {
-    const copiedData = this.data.slice();
-
-    //copiedData.push({color:"yellow", id:"1",name:"Atticus I.",progress:"30"});
-    //copiedData.push({color:"yellow", id:"1",name:"Atticus I.",progress:"30"});
-    copiedData.push(test);
-    console.log(copiedData);
+  addTableData(tableData: any) {
+    let copiedData = this.data.slice();
+    copiedData = tableData;
     this.dataChange.next(copiedData);
   }
 }
@@ -70,7 +58,7 @@ export class ExampleDatabase {
 export class ExampleDataSource extends DataSource<any> {
   constructor(private _exampleDatabase: ExampleDatabase) {
     super();
-        console.log('exd');
+    console.log('exd');
   }
 
   /** Connect function called by the table to retrieve one stream containing the data to render. */
@@ -78,5 +66,5 @@ export class ExampleDataSource extends DataSource<any> {
     return this._exampleDatabase.dataChange;
   }
 
-  disconnect() {}
+  disconnect() { }
 }

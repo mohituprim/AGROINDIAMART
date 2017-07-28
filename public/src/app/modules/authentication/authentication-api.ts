@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs';
 
 export abstract class  AuthenticationApi {
     logIn : (loginUser:any) => Observable<any>;

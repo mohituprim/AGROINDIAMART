@@ -9,15 +9,16 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "start-build": "ng build -watch | tsc -p tsconfig-server.json -watch | nodemon server.js"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.2.6",
     "@angular/cdk": "^2.0.0-beta.8",
-    "@angular/common": "^4.2.6",
+    "@angular/common": "^4.3.1",
     "@angular/compiler": "^4.2.6",
-    "@angular/core": "^4.2.6",
+    "@angular/core": "^4.3.1",
     "@angular/flex-layout": "^2.0.0-rc.1",
     "@angular/forms": "^4.2.6",
     "@angular/http": "^4.2.6",
@@ -27,8 +28,10 @@
     "@angular/router": "^4.2.6",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
+    "hammerjs": "^2.0.8",
+    "npm": "^5.3.0",
     "rxjs": "^5.4.2",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.14"
   },
   "devDependencies": {
     "@angular/cli": "1.1.0",
@@ -46,6 +49,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
+    "source-map-explorer": "^1.4.0",
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
