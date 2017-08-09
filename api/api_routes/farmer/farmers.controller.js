@@ -4,7 +4,7 @@ class FarmersController {
 
     constructor(router) {
         router.post('/order/sell/save', this.saveSellOrder.bind(this));
-        router.post('/order/sell/find', this.getSellOrders.bind(this));
+        router.get('/order/sell/find', this.getSellOrders.bind(this));
     }
 
     saveSellOrder(req, res) {

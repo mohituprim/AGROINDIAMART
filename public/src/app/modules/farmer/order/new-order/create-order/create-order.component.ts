@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
-import { FarmerService } from "app/services/farmer/farmer.service";
+import { ActivatedRoute, Router } from "@angular/router";
+
 import { IFarmerSellOrder } from "app/shared/interfaces/IFarmer";
+
+import { FarmerService } from "app/services/farmer/farmer.service";
 
 @Component({
   selector: 'create-order',
@@ -19,7 +21,9 @@ export class CreateOrderComponent implements OnInit {
   newSellOrder: IFarmerSellOrder;
   constructor(
     private farmerService: FarmerService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
+
   ngOnInit() :void {
     //Intialize the sell order
     this.farmerService.getSellOrder(0)
@@ -87,14 +91,9 @@ export class CreateOrderComponent implements OnInit {
   }
 
   OnAddNewOrder(){
-    console.log('saving');
-
-    //console.log(this.farmerService.saveSellOrder(this.newSellOrder));
     this.farmerService.saveSellOrder(this.newSellOrder)
-        .subscribe((data) => {
-            console.log('got valid: ', data);
-            //this.onDClose.emit(true);
-            console.log('valid');
+        .subscribe((response:IFarmerSellOrder[]) => {
+            this.router.navigate(['/farmer/order/sell']);
           },
           (err)=> {
             console.log('got error: ', err);

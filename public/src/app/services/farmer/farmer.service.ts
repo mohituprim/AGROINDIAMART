@@ -18,10 +18,10 @@ export class FarmerService {
 
     //Sell Order operation
     getSellOrders(): Observable<IFarmerSellOrder[]> {
-      return this.http.get(this.baseUrl)
-          .map(this.extractData)
-          .do(data => console.log('getOrders: ' + JSON.stringify(data)))
-          .catch(this.handleError);
+        const url = `${this.baseUrl}farmer/order/sell/find`;
+        return this.http.get(url)
+            .map((resp: Response) => resp.json())
+            .catch(this.handleError);
     }
 
     getSellOrder(id:Number): Observable<IFarmerSellOrder>{

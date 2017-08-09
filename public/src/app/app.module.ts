@@ -7,6 +7,7 @@ import { RouterModule } from "@angular/router";
 import { MaterialModule, MdNativeDateModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CarouselModule } from 'angular4-carousel';
 import 'hammerjs';
 
 //Routes
@@ -42,6 +43,7 @@ import { DefaultContentComponent } from './components/default-content/default-co
     BrowserAnimationsModule,
     MaterialModule,
     MdNativeDateModule,
+    CarouselModule,
     //Custom Module
     FrameworkModule,
 

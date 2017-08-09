@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
+
 
 @Component({
   selector: 'farmer-order-sell',
@@ -9,12 +11,12 @@ export class OrderSellComponent implements OnInit {
 
   ordersList:any;
   columnName:any
-  constructor() {
-    this.ordersList=[{id:'1',productCode:'123'}]
-    this.columnName=['id','productCode']
+  constructor(private route: ActivatedRoute) {
+    this.columnName=['orderDate','productCategory', 'productType']
    }
 
   ngOnInit() {
+    this.ordersList = this.route.snapshot.data['orders'];
   }
 
 }

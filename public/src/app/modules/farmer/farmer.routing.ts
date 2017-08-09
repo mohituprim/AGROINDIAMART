@@ -13,6 +13,7 @@ import { OrderSellComponent } from "app/modules/farmer/order/sell/order-sell.com
 import { OrderBuyComponent } from "app/modules/farmer/order/buy/order-buy.component";
 import { NewOrderComponent } from "app/modules/farmer/order/new-order/new-order.component";
 import { CreateOrderComponent } from "app/modules/farmer/order/new-order/create-order/create-order.component";
+import { FarmerSellOrderResolver } from "app/services/farmer/farmer-sellorder.resolver.service";
 
 const farmerRoutes: Routes = [
   {
@@ -33,7 +34,7 @@ const farmerRoutes: Routes = [
         children: [
               { path: '', redirectTo: 'buy', pathMatch: 'full' },
               { path: 'buy', component: OrderBuyComponent },
-              { path: 'sell', component: OrderSellComponent },
+              { path: 'sell', component: OrderSellComponent, resolve: { orders: FarmerSellOrderResolver } },
               { path: 'rent', component: OrderRentComponent },
               { path: 'services', component: OrderServicesComponent },
             ]

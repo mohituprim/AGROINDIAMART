@@ -29,6 +29,7 @@ import { OrderServicesComponent } from "app/modules/farmer/order/services/order-
 import { NewOrderComponent } from "app/modules/farmer/order/new-order/new-order.component";
 import { CreateOrderComponent } from "app/modules/farmer/order/new-order/create-order/create-order.component";
 import { FarmerService } from "app/services/farmer/farmer.service";
+import { FarmerSellOrderResolver } from "app/services/farmer/farmer-sellorder.resolver.service";
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { FarmerService } from "app/services/farmer/farmer.service";
     AuthenticationService,//equivalent to ---{provide: UserApi, useClass: UserService }
     { provide: AuthenticationApi, useExisting: AuthenticationService },
     AuthGuard,
-    FarmerService
+    FarmerService,
+    FarmerSellOrderResolver
   ]
 })
 export class FarmerModule { }
