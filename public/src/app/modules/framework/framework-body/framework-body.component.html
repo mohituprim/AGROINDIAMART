@@ -4,9 +4,9 @@
       <fw-tool-bar (mobileNavToggle)="mobileSidenav.toggle()"></fw-tool-bar>
     </div>
     <div class="container">
-      <div class="sidenav-container" *ngIf="!authService.isLoggedIn()">
+      <!-- <div class="sidenav-container" *ngIf="!authService.isLoggedIn()">
         <fw-dropdown-side-nav></fw-dropdown-side-nav>
-      </div>
+      </div> -->
       <div class="mainContentContainer">
         <router-outlet></router-outlet>
       </div>

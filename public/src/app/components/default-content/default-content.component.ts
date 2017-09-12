@@ -34,4 +34,20 @@ export class DefaultContentComponent implements OnInit {
     stopAutoplayMinWidth: 768
   };
 
+  tiles = [
+    {text: 'One', cols: 1, rows: 1, color: '#f3f3f3;'},
+    {text: 'Two', cols: 1, rows: 1, color: '#f3f3f3;'},
+    {text: 'Three', cols: 1, rows: 1, color: '#f3f3f3;'},
+    {text: 'Four', cols: 1, rows: 1, color: '#f3f3f3;'},
+    {text: 'Five', cols: 1, rows: 1, color: '#f3f3f3;'},
+    {text: 'Six', cols: 1, rows: 1, color: '#f3f3f3;'},
+  ];
+
+        subMenuItems = [
+                    {name:'Agriculture Product', link:'/farmer/order/buy', cols: 1, rows: 1},
+                    {name:'Machinary', link:'/farmer/order/sell', cols: 1, rows: 1},
+                    {name:'Fertilizer', link:'/farmer/order/services', cols: 1, rows: 1},
+                    {name:'Agriculture Land', link:'/farmer/order/rent', cols: 1, rows: 1},
+                  ]
+
 }

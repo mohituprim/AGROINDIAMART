@@ -21,6 +21,7 @@ import { AuthenticationApi } from "app/modules/authentication/authentication-api
 //Modules
 import { FrameworkModule } from "app/modules/framework/framework.module";
 import {  FarmerModule } from "./modules/farmer/farmer.module";
+import { ShoppingCartModule } from "app/modules/shoppingcart/shoppingcart.module";
 
 //Component
 import { AppComponent } from './app.component';
@@ -46,8 +47,9 @@ import { DefaultContentComponent } from './components/default-content/default-co
     CarouselModule,
     //Custom Module
     FrameworkModule,
-
+    ShoppingCartModule,
     FarmerModule,
+
     //The order of route configuration matters.
     AppRoutingModule
   ],

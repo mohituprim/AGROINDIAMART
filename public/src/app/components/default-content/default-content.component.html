@@ -2,6 +2,31 @@
   <div style="width: 800px; height: 300px">
   <carousel [sources]="imageSources" [config]="config"></carousel>
 </div>
-  <md-card class="firstContent" style="margin-bottom: 20px !important;">Everything about the farmer fvgavgfevgfdvsdvdsgfrvbdsrbrsbsdr</md-card>
-  <md-card class="firstContent">Everything about the farm Machincary fvgavgfevgfdvsdvdsgfrvbdsrbrsbsdr</md-card>
+<md-grid-list cols="3">
+  <md-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+
+    <md-card class="square_board">
+      <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title style="margin-top:12px">Shiba Inu</md-card-title>
+        <md-card-subtitle>Dog Breed</md-card-subtitle>
+      </md-card-header>
+      <md-divider></md-divider>
+      <md-card-content>
+         <md-nav-list >
+          <div *ngFor="let subMenuItem of subMenuItems" routerLink="{{subMenuItem.link}}">
+            <md-list-item  class="list-item">
+              <a>{{subMenuItem.name}}</a>
+            </md-list-item>
+            <md-divider></md-divider>
+          </div>
+        </md-nav-list> 
+      </md-card-content>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>
 </div>
